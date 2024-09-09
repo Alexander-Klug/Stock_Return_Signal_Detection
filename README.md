@@ -49,33 +49,6 @@ By introducing this signal, we create a controlled environment to test how well 
 
 The repository contains implementations of three models: **XGBoost**, **Decision Trees**, and a **Neural Network**. All models are trained on the same synthetic dataset to compare their ability to detect the signal.
 
-### 1. XGBoost
-
-[XGBoost](https://xgboost.ai/) is a powerful gradient boosting algorithm used for supervised learning tasks. In this project, we use it for multi-class classification with softmax output to classify sequences into the three classes (`+1`, `0`, `-1`).
-
-- **Model**: `XGBClassifier`
-- **Hyperparameters**: 
-  - Objective: `multi:softprob`
-  - Number of classes: `3`
-
-### 2. Decision Trees
-
-A [Decision Tree](https://scikit-learn.org/stable/modules/tree.html) classifier is used for its interpretability and speed, making it an excellent baseline for comparison against more complex models.
-
-- **Model**: `DecisionTreeClassifier`
-- **Hyperparameters**:
-  - Maximum depth: `4`
-
-### 3. Neural Network
-
-The [Neural Network](https://www.tensorflow.org/) is implemented using TensorFlow's Keras API. The network architecture consists of two hidden layers with ReLU activations and an output layer using softmax activation for multi-class classification.
-
-- **Model**: `Sequential` (Keras)
-- **Architecture**:
-  - First hidden layer: `64` units, ReLU activation
-  - Second hidden layer: `32` units, ReLU activation
-  - Output layer: `3` units, softmax activation
-
 ## Confidence Thresholding
 
 Each model predicts the probability distribution over the three classes (`+1`, `0`, `-1`). A **confidence threshold** is introduced to filter out uncertain predictions. If the maximum predicted probability is lower than the threshold, the prediction is marked as "unsure." This allows us to evaluate:
