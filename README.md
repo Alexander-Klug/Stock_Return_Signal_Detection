@@ -47,7 +47,7 @@ By introducing this signal, we create a controlled environment to test how well 
 
 ## Models
 
-The repository contains implementations of three models: **XGBoost**, **Decision Trees**, and a **Neural Network**. All models are trained on the same synthetic dataset to compare their ability to detect the signal.
+The repository contains implementations of three models: **Decision Trees**, **XGBoost** and a **Neural Network**. All models are trained on the same synthetic dataset to compare their ability to detect the signal.
 
 ## Confidence Thresholding
 
