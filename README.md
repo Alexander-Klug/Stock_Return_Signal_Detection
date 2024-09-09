@@ -65,8 +65,3 @@ Each model predicts the probability distribution over the three classes (`+1`, `
 - XGBoost
 - NumPy
 - Matplotlib (optional, for visualizations)
-
-You can install all dependencies by running:
-
-```bash
-pip install -r requirements.txt
